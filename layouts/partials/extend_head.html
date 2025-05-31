@@ -1,5 +1,14 @@
+<!--字体配置-->>
+<link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css" />
+<link rel="stylesheet" href="{{ "css/custom-font.css" | relURL }}">
+
+
+
+
 {{ if (eq $.Page.Params.math "katex") }}
   {{ partial "katex.html" . }}
 {{ else if (eq $.Page.Params.math "mathjax") }}
   {{ partial "mathjax.html" . }}
 {{ end }}
+
+
