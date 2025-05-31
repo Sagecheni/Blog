@@ -1,0 +1,91 @@
+baseURL: https://blog.sa1ge.ink/
+languageCode: en-us
+title: Sage's Blog
+theme: ["PaperMod"]
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts", "papermod"]
+
+
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 5
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "A blog about Sage's adventures in coding and life."
+  author: Sage
+  math: true
+  # author: ["Me", "You"] # multiple authors
+
+  defaultTheme: auto
+  disableThemeToggle: true
+  ShowShareButtons: false
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+
+  homeInfoParams:
+    Title: "Ars longa, vita brevis."
+    Content: "Exploring this enduring pursuit."
+  
+  assets:
+    disableHLJS: true
+    favicon: "/assets/favicon.ico"
+    favicon16x16: "/assets/favicon-16x16.png"
+    favicon32x32: "/assets/favicon-32x32.png"
+    apple_touch_icon: "/assets/apple-touch-icon.png"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/Sagecheni"
+    - name: email
+      url: "mailto:sagecheni@bupt.edu.cn"
+    - name: rss
+      url: "https://blog.sa1ge.ink/index.xml"
+  
+
+menu:
+  main:
+    - identifier: archive
+      name : Archive
+      url: archives
+      weight: 5
+    - identifier: search
+      name: Search
+      url: search/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
