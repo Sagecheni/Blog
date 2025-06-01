@@ -1,0 +1,165 @@
+/* Archive页面美化样式 - 简洁现代风格 */
+
+.archive-posts {
+    width: 100%;
+    font-size: 16px;
+}
+
+.archive-year {
+    margin-top: 60px !important;
+    margin-bottom: 40px !important;
+    border-bottom: none !important;
+}
+
+.archive-year-header {
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: var(--primary) !important;
+    margin-bottom: 30px !important;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.archive-year-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0.3;
+}
+
+.archive-header-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: opacity 0.2s ease;
+}
+
+.archive-header-link:hover {
+    opacity: 0.7;
+}
+
+.archive-month {
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+    margin: 30px 0 !important;
+    border-bottom: none !important;
+    gap: 40px;
+}
+
+.archive-month-header {
+    margin: 0 !important;
+    width: 120px !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: var(--secondary) !important;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem !important;
+}
+
+.archive-posts {
+    flex: 1;
+    margin-left: 0 !important;
+}
+
+.archive-entry {
+    position: relative !important;
+    padding: 12px 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid var(--border);
+    background: transparent !important;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+.archive-entry:last-child {
+    border-bottom: none;
+}
+
+.archive-entry:hover {
+    padding-left: 16px !important;
+    background: var(--theme) !important;
+    margin: 0 -8px !important;
+    border-radius: 6px !important;
+    border-bottom: 1px solid transparent !important;
+}
+
+.archive-entry-title {
+    margin: 0 0 4px 0 !important;
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    line-height: 1.5;
+    color: var(--primary) !important;
+    transition: color 0.2s ease;
+}
+
+.archive-entry:hover .archive-entry-title {
+    color: var(--primary) !important;
+}
+
+.archive-count {
+    color: var(--secondary) !important;
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
+    opacity: 0.7;
+    margin-left: 8px;
+}
+
+.archive-meta {
+    color: var(--secondary) !important;
+    font-size: 0.85rem !important;
+    opacity: 0.8;
+}
+
+.entry-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .archive-month {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    
+    .archive-month-header {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .archive-year {
+        margin-top: 40px !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .archive-year-header {
+        font-size: 1.5rem !important;
+    }
+    
+    .archive-entry:hover {
+        margin: 0 !important;
+        padding-left: 12px !important;
+    }
+}
+
+/* 移除动画，保持简洁 */
+.archive-year,
+.archive-entry {
+    animation: none;
+}
+
+/* 优化深色模式 */
+@media (prefers-color-scheme: dark) {
+    .archive-year-header::after {
+        opacity: 0.4;
+    }
+}
