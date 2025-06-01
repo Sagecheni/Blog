@@ -28,7 +28,7 @@ $$
 - 注意力机制的核心在于计算一个上下文向量$(Atten(Q,K,V))$，这个向量是输入序列的加权和，权重反应了输入序列中每个部分对于生成序列当前输出词的重要性。
 - 在Scaled Dot-Product Attention 中，首先计算 query 和 key 的关联性，然后将这个关联性作为value 的权重，各个权重与 value 的乘积相加得到输出。(公式 1)
 - $\sqrt{ d_{k} }$作用是缩放注意力分数。因为当$d_{k}$很大的时候，点积$QK^T$的结果会很大，导致 Softmax 产生极度不均匀的分布，梯度会变得很小。
-
+{{<collapse summary="代码实现">}}
 ```Python
 import torch
 import torch.nn as nn
@@ -84,7 +84,7 @@ def test():
 if __name__ == "__main__":
     test()
 ```
-
+{{< /collapse >}}
 # 多头注意力
 Transformer 是完全基于注意力机制的新架构，放弃了循环和卷积，使用多头注意力(Multi-Head Attention)(MHA)。
 

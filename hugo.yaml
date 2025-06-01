@@ -35,7 +35,6 @@ params:
   description: "A blog about Sage's adventures in coding and life."
   author: Sage
   math: true
-  # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
   disableThemeToggle: true
